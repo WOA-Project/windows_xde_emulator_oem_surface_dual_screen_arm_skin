@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Skin>
+  <Display
+    
+    DisplayWidth="1350"
+    DisplayHeight="1800"
+    DisplayCount="2"
+    DisplaysPerChrome="2"
+    DisplayGapWidth="64"
+    DefaultDiagonalSize="5.6"
+    DisplayScaleFactor="225"
+
+    ExternalDisplayWidth="1280"
+    ExternalDisplayHeight="720"
+
+    DisplayPosX="30"
+    DisplayPosY="30"
+
+    VideoMode="-1"
+    Alias="full"
+
+    QuickAccessToolbarXPos="5"
+    QuickAccessToolbarYPos="0"
+    
+    MappingImage="AndChrome_masks.png"
+    NormalImage="AndChrome_up.png"
+    DownImage="AndChrome_down.png"
+
+    >
+
+    <Buttons>
+      <Button
+        Type="VolumeUp"
+        KeyMapping="LWin, F9"
+        MappingColor="0x0000FF"
+        Anchor="Right"
+      />
+      <Button
+        Type="VolumeDown"
+        KeyMapping="LWin, F10"
+        MappingColor="0xFF0000"
+        Anchor="Previous"
+      />
+      <Button
+        Type="Power"
+        KeyMapping="LWin, F12"
+        MappingColor="0xFFFF00"
+        Anchor="Right"
+      />
+    </Buttons>
+
+  </Display>
+</Skin>

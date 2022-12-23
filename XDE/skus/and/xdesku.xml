@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XdeSku BrandingName="StockPlugin.GenericBranding">
+  <Options
+      ProcessorCount="8"
+      DefaultMemSize="6144"
+      MinMemSize="6144"
+      MaxMemSize="6144"
+      WindowsKeyCombinationsEnabled="true"
+      WindowsKeyEnabled="true"
+      WriteVhdBootSettingsDisabled="false"
+      NATDisabled="false"
+      ValidSensors="Default"
+      UseHCSIfAvailable="true"
+      ShowGuestDisplayASAP="true"
+      GpuAssignmentMode="SingleMostPerformant"
+      DefaultDeviceName="Andromeda Emulator"
+      DefaultSkin="full"
+      InputMode="SingleTouch"
+  />
+  <RequiredFeatures>
+    <Feature Name="StockPlugin.SimpleCommandsFeature"/>
+    <Feature Name="StockPlugin.AudioFeature"/>
+    <Feature Name="StockPlugin.InjectedInputFeature" />
+    <Feature Name="StockPlugin.MicrophoneFeature"/>
+    <Feature Name="StockPlugin.GuestNotificationFeature"/>
+    <Feature Name="StockPlugin.DiagnosticsFeature"/>
+    <Feature Name="SantPlugin.OrientationFeature"/>
+  </RequiredFeatures>
+  <RequiredTabs>
+    <Tab Name="StockPlugin.DiagnosticsTab"/>
+    <Tab Name="StockPlugin.NetworkWithoutThrottlingTab"/>
+    <Tab Name="SantPlugin.OrientationTab"/>
+    <Tab Name="StockPlugin.ScreenshotTab"/>
+  </RequiredTabs>
+  <Toolbar>
+    <Button Name="StockPlugin.Close"/>
+    <Button Name="StockPlugin.Minimize"/>
+    <Button Name="StockPlugin.Separator"/>
+    <Button Name="StockPlugin.MouseInput" />
+    <Button Name="StockPlugin.SingleTouchInput" />
+    <Button Name="StockPlugin.MultiTouchInput" />
+    <Button Name="StockPlugin.PenInput" />
+    <Button Name="StockPlugin.DisabledInput" />
+    <Button Name="StockPlugin.Separator"/>
+    <Button Name="StockPlugin.ShowExternalDisplay"/>
+    <Button Name="StockPlugin.Separator"/>
+    <Button Name="SantPlugin.OrientationRotateLeft"/>
+    <Button Name="SantPlugin.OrientationRotateRight"/>
+    <Button Name="SantPlugin.OrientationFlyout"/>
+    <Button Name="StockPlugin.Separator"/>
+    <Button Name="StockPlugin.FitToScreen"/>
+    <Button Name="StockPlugin.Help"/>
+    <Button Name="StockPlugin.ShowTools"/>
+  </Toolbar>
+  <Registry>
+    <Key Root="HKLM_SOFTWARE" Path="Microsoft\CoreShell\Oobe">
+      <Value Name="OobePhase" Type="REG_DWORD" Data="4"/>
+    </Key>
+    <Key Root="HKLM_SOFTWARE" Path="Microsoft\CoreShell\Oobe">
+      <Value Name="SkipInteractiveWizard" Type="REG_DWORD" Data="1"/>
+    </Key>
+    <Key Root="HKLM_SOFTWARE" Path="Microsoft\CoreShell">
+      <Value Name="UnlockedOnBoot" Type="REG_DWORD" Data="1"/>
+    </Key>
+    <Key Root="HKLM_SOFTWARE" Path="Microsoft\shell">
+      <Value Name="SingleDisplayComposeExperience" Type="REG_DWORD" Data="$SingleDisplay"/>
+    </Key>
+    <Key Root="HKLM_SOFTWARE" Path="Policies\Microsoft\Windows\Appx">
+      <Value Name="AllowDevelopmentWithoutDevLicense" Type="REG_DWORD" Data="1" />
+    </Key>
+    <Key Root="HKLM_SOFTWARE" Path="Microsoft\Windows\CurrentVersion\DevTools">
+      <Value Name="ProfileAsAdmin" Type="REG_DWORD" Data="1" />
+    </Key>
+    <!--<Key Root="HKLM_SYSTEM" Path="ControlSet001\Control\Video\Virtualization" ContainerFlags="Host Container">
+        <Value Name="CustomEdid" Type="REG_BINARY" Data="00,FF,FF,FF,FF,FF,FF,00,36,68,2E,06,01,00,00,00,FF,15,01,04,80,0E,12,78,22,EE,95,A3,54,4C,99,26,0F,50,54,00,00,00,01,01,01,01,01,01,01,01,01,01,01,01,01,01,01,01,06,4A,A0,A0,50,80,37,70,30,20,3A,00,B0,40,12,00,00,1E,00,00,00,FC,00,48,79,70,65,72,56,4D,6F,6E,69,74,6F,72,00,00,00,10,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,10,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,85" />
+    </Key>-->
+    <Key Root="HKLM_SOFTWARE" Path="Microsoft\Windows\CurrentVersion\Explorer\Scaling" ContainerFlags="Host Container">
+      <Value Name="LegacyAppScaleFactor" Type="REG_DWORD" Data="$DisplayScaleFactor" />
+      <Value Name="ScaleFactor" Type="REG_DWORD" Data="$DisplayScaleFactor" />
+    </Key>
+    <Key Root="HKLM_SOFTWARE" Path="WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\Scaling" ContainerFlags="Host Container">
+        <Value Name="LegacyAppScaleFactor" Type="REG_DWORD" Data="$DisplayScaleFactor" />
+      <Value Name="ScaleFactor" Type="REG_DWORD" Data="$DisplayScaleFactor" />  
+    </Key>
+    <Key Root="HKLM_SOFTWARE" Path="WowAA32Node\Microsoft\Windows\CurrentVersion\Explorer\Scaling" ContainerFlags="Host Container">
+        <Value Name="LegacyAppScaleFactor" Type="REG_DWORD" Data="$DisplayScaleFactor" />
+        <Value Name="ScaleFactor" Type="REG_DWORD" Data="$DisplayScaleFactor" />
+    </Key>
+  </Registry>
+</XdeSku>
